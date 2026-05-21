@@ -1,7 +1,9 @@
+'use client';
+
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useReportData, useLanguage } from '../../context/LanguageContext';
 
 export default function PageHero({ title, subtitle, breadcrumbs = [] }) {

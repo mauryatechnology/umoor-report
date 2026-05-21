@@ -1,8 +1,9 @@
+'use client';
+
 import { useState, useMemo } from 'react';
 import { CheckCircle, AlertTriangle } from 'lucide-react';
 import { useReportData, useLanguage } from '../../context/LanguageContext';
 import PageHero from './PageHero';
-import SEO from '../SEO';
 import FadeIn from '../animations/FadeIn';
 import FilterPanel from './FilterPanel';
 import DataCard from './DataCard';
@@ -86,8 +87,6 @@ export default function ReportPage() {
 
   return (
     <div className="font-body bg-cream min-h-screen flex flex-col">
-      <SEO title={uiDictionary.hero.title} description={uiDictionary.hero.subtitle} />
-
       <main className="flex-1 flex flex-col">
         <PageHero title={uiDictionary.hero.title} subtitle={uiDictionary.hero.subtitle} breadcrumbs={[{ label: uiDictionary.hero.breadcrumb }]} />
 

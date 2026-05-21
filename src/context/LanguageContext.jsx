@@ -1,18 +1,23 @@
+'use client';
+
 import { createContext, useState, useEffect, useContext } from 'react';
-import * as dataEn from '../data/reportsDataEn';
-import * as dataUr from '../data/reportsDataUr';
 
 const LanguageContext = createContext();
 
 export const useLanguage = () => useContext(LanguageContext);
 
 export const useReportData = () => {
-  const { language } = useLanguage();
-  return language === 'en' ? dataEn : dataUr;
+  const { language, report } = useLanguage();
+  // Return the data for the current language
+  if (!report) return { reportsData: [], commonData: {}, TAGS_META: {}, uiDictionary: {} };
+  return language === 'en' ? report.reportsDataEn : report.reportsDataUr;
 };
 
-export const LanguageProvider = ({ children }) => {
+export const LanguageProvider = ({ children, initialReport }) => {
   const [language, setLanguage] = useState('en');
+  const [report, setReport] = useState(initialReport);
+
+  const updateReport = (newReport) => setReport(newReport);
 
   useEffect(() => {
     if (language === 'en') {
@@ -29,7 +34,7 @@ export const LanguageProvider = ({ children }) => {
   };
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
+    <LanguageContext.Provider value={{ language, toggleLanguage, report, updateReport }}>
       {children}
     </LanguageContext.Provider>
   );
