@@ -68,13 +68,13 @@ export default function RegisterPage() {
         throw new Error(data.error || 'Registration failed');
       }
 
-      // Redirect to dashboard
-      const isLocalhost = window.location.hostname.includes('localhost');
-      if (isLocalhost) {
+      // Redirect to dashboard (with path fallback support for local and vercel preview domains)
+      const isLocalhostOrVercel = window.location.hostname.includes('localhost') || window.location.hostname.endsWith('.vercel.app');
+      if (isLocalhostOrVercel) {
         router.push(`/d/${data.user.location}`);
       } else {
-        // In production, redirect to the subdomain dashboard
-        const rootDomain = (process.env.NEXT_PUBLIC_ROOT_DOMAIN || 'umoor-report.vercel.app').replace(/^https?:\/\//, '');
+        // In production custom domain, redirect to the subdomain dashboard
+        const rootDomain = (process.env.NEXT_PUBLIC_ROOT_DOMAIN || window.location.hostname).replace(/^https?:\/\//, '').replace(/\/+$/, '');
         window.location.href = `https://${data.user.location}.${rootDomain}/dashboard`;
       }
     } catch (err) {
