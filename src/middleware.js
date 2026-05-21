@@ -34,11 +34,11 @@ export default function middleware(req) {
   
   // Determine if it's a subdomain
   let currentHost = hostname;
-  // If it's a local test with localhost:3000, we don't have a real subdomain usually
-  // unless we edit /etc/hosts or use something like localtest.me
   
-  // Check if the host contains our root domain
-  if (currentHost.includes(rootDomain)) {
+  // Prevent Vercel domains from being treated as tenant subdomains
+  if (currentHost === 'umoor-report.vercel.app' || currentHost.endsWith('.vercel.app')) {
+    currentHost = ''; // It's the main site or a preview URL
+  } else if (currentHost.includes(rootDomain)) {
     // Extract subdomain
     currentHost = currentHost.replace(`.${rootDomain}`, '');
     currentHost = currentHost.replace(rootDomain, '');
