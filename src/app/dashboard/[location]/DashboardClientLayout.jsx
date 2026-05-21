@@ -36,7 +36,7 @@ export default function DashboardClientLayout({ children, location }) {
     try {
       await fetch('/api/auth/logout', { method: 'POST' });
       // Redirect to main domain login or local login
-      const rootDomain = process.env.NEXT_PUBLIC_ROOT_DOMAIN || 'umoor-report.vercel.app';
+      const rootDomain = (process.env.NEXT_PUBLIC_ROOT_DOMAIN || 'umoor-report.vercel.app').replace(/^https?:\/\//, '');
       const isLocalhost = window.location.hostname.includes('localhost');
       
       if (isLocalhost) {
@@ -57,7 +57,7 @@ export default function DashboardClientLayout({ children, location }) {
   ];
 
   const getPublicUrl = () => {
-    const rootDomain = process.env.NEXT_PUBLIC_ROOT_DOMAIN || 'umoor-report.vercel.app';
+    const rootDomain = (process.env.NEXT_PUBLIC_ROOT_DOMAIN || 'umoor-report.vercel.app').replace(/^https?:\/\//, '');
     const isLocalhost = window.location.hostname.includes('localhost');
     return isLocalhost ? `/r/${location}` : `https://${location}.${rootDomain}`;
   };

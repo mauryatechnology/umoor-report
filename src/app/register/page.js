@@ -73,7 +73,8 @@ export default function RegisterPage() {
       if (isLocalhost) {
         router.push(`/d/${data.user.location}`);
       } else {
-        const rootDomain = process.env.NEXT_PUBLIC_ROOT_DOMAIN || 'umoor-report.vercel.app';
+        // In production, redirect to the subdomain dashboard
+        const rootDomain = (process.env.NEXT_PUBLIC_ROOT_DOMAIN || 'umoor-report.vercel.app').replace(/^https?:\/\//, '');
         window.location.href = `https://${data.user.location}.${rootDomain}/dashboard`;
       }
     } catch (err) {

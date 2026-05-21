@@ -38,7 +38,7 @@ export default function LoginPage() {
       } else {
         // In production, we can either redirect to subdomain or let middleware handle it
         // We'll redirect to the subdomain dashboard
-        const rootDomain = process.env.NEXT_PUBLIC_ROOT_DOMAIN || 'umoor-report.vercel.app';
+        const rootDomain = (process.env.NEXT_PUBLIC_ROOT_DOMAIN || 'umoor-report.vercel.app').replace(/^https?:\/\//, '');
         window.location.href = `https://${data.user.location}.${rootDomain}/dashboard`;
       }
     } catch (err) {

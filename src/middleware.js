@@ -22,7 +22,7 @@ export default function middleware(req) {
   const path = url.pathname;
   
   // Define main domain structure
-  const rootDomain = process.env.NEXT_PUBLIC_ROOT_DOMAIN || 'localhost:3000';
+  const rootDomain = (process.env.NEXT_PUBLIC_ROOT_DOMAIN || 'localhost:3000').replace(/^https?:\/\//, '');
   
   // Exclude Vercel preview domains if necessary
   if (
