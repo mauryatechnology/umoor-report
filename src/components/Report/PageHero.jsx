@@ -32,7 +32,7 @@ export default function PageHero({ title, subtitle, breadcrumbs = [] }) {
       <div className="max-w-7xl mx-auto px-4 relative z-10 flex flex-col items-center text-center">
         {breadcrumbs.length > 0 && (
           <nav className={`flex items-center justify-center flex-wrap gap-2 text-cream/50 mb-6 ${isUrdu ? 'font-kanz text-base' : 'text-sm'}`}>
-            <Link to="/" className="hover:text-gold transition-colors">{isUrdu ? 'مرکزی صفحہ' : 'Home'}</Link>
+            <Link href="/" className="hover:text-gold transition-colors">{isUrdu ? 'مرکزی صفحہ' : 'Home'}</Link>
             {breadcrumbs.map((bc, i) => (
               <span key={i} className="flex items-center gap-2">
                 {isUrdu ? <ChevronLeft size={14} /> : <ChevronRight size={14} />}

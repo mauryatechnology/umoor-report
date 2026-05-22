@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function PageHero({ title, subtitle, breadcrumbs = [], icon: Icon }) {
   const heroRef = useRef(null);
@@ -49,12 +49,12 @@ export default function PageHero({ title, subtitle, breadcrumbs = [], icon: Icon
         {/* Breadcrumb */}
         {breadcrumbs.length > 0 && (
           <nav className="flex items-center justify-center flex-wrap gap-2 text-cream/50 text-sm mb-6">
-            <Link to="/" className="hover:text-gold transition-colors">Home</Link>
+            <Link href="/" className="hover:text-gold transition-colors">Home</Link>
             {breadcrumbs.map((bc, i) => (
               <span key={i} className="flex items-center gap-2">
                 <ChevronRight size={14} />
                 {bc.href ? (
-                  <Link to={bc.href} className="hover:text-gold transition-colors">{bc.label}</Link>
+                  <Link href={bc.href} className="hover:text-gold transition-colors">{bc.label}</Link>
                 ) : (
                   <span className="text-gold">{bc.label}</span>
                 )}

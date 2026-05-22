@@ -1,24 +1,22 @@
 import { notFound } from 'next/navigation';
 import ReportClientPage from './ReportClientPage';
+import dbConnect from '../../../lib/mongodb';
+import Report from '../../../models/Report';
 
 export const revalidate = 60; // Revalidate every 60 seconds (ISR)
 
 async function getReportData(location) {
-  // Determine API URL based on environment
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-  
   try {
-    const res = await fetch(`${baseUrl}/api/reports/${location}`, {
-      next: { revalidate: 60 } // Also Next.js fetch cache revalidation
-    });
+    await dbConnect();
     
-    if (!res.ok) {
-      if (res.status === 404) return null;
-      throw new Error('Failed to fetch report');
-    }
+    // Direct database call instead of self-referencing fetch
+    // (fetch to own API fails on Vercel during SSR/ISR)
+    const report = await Report.findOne({ location: location.toLowerCase() }).lean();
     
-    const data = await res.json();
-    return data.report;
+    if (!report) return null;
+    
+    // Serialize MongoDB document (convert _id, dates, etc.)
+    return JSON.parse(JSON.stringify(report));
   } catch (error) {
     console.error('Error fetching report:', error);
     return null;

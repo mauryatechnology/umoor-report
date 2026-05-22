@@ -102,7 +102,7 @@ export default function DashboardOverview({ params }) {
               <p className="text-charcoal/70 mb-6 text-sm">
                 Update the English version of achievements, improvements, labels, and accordion sections. This data powers the English view of your portal.
               </p>
-              <Link href={`/d/${location}/english`} className="inline-flex items-center justify-between w-full bg-charcoal/5 hover:bg-charcoal/10 text-charcoal font-medium px-4 py-3 rounded-xl transition-colors">
+              <Link href={`/dashboard/${location}/english`} className="inline-flex items-center justify-between w-full bg-charcoal/5 hover:bg-charcoal/10 text-charcoal font-medium px-4 py-3 rounded-xl transition-colors">
                 <span>Go to English Editor</span>
                 <ArrowRight size={16} />
               </Link>
@@ -123,7 +123,7 @@ export default function DashboardOverview({ params }) {
               <p className="text-charcoal/70 mb-6 text-sm">
                 Update the Urdu version of achievements, improvements, labels, and accordion sections. This data powers the Urdu view of your portal.
               </p>
-              <Link href={`/d/${location}/urdu`} className="inline-flex items-center justify-between w-full bg-charcoal/5 hover:bg-charcoal/10 text-charcoal font-medium px-4 py-3 rounded-xl transition-colors">
+              <Link href={`/dashboard/${location}/urdu`} className="inline-flex items-center justify-between w-full bg-charcoal/5 hover:bg-charcoal/10 text-charcoal font-medium px-4 py-3 rounded-xl transition-colors">
                 <span>Go to Urdu Editor</span>
                 <ArrowRight size={16} />
               </Link>

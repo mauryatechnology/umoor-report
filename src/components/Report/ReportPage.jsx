@@ -73,7 +73,9 @@ export default function ReportPage() {
   }, [activeUmoorId, allCities, reportsData]);
   
   const dynamicAccordion = useMemo(() => {
-    let accordionData = commonData.accordion[0];
+    // Guard against missing accordion data in commonData
+    const defaultAccordion = { images: [], docUrl: '', heading: 'Major Issues Overview', content: '' };
+    let accordionData = (commonData.accordion && commonData.accordion[0]) || defaultAccordion;
     if (activeUmoorId !== 'all' && activeCityId !== 'all') {
       const umoor = reportsData.find(u => u.id === activeUmoorId);
       const city = umoor?.cities?.find(c => c.id === activeCityId);

@@ -35,8 +35,8 @@ export const commonData = {
         "/Mss.jpeg"
       ],
       "docUrl": umoorPdf,
-      "heading": "Major Issues Overview",
-      "content": "Detailed analysis and overview of the current status and primary considerations for this sector."
+      "heading": "قضااي رئيسية",
+      "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
     }
   ]
 };
@@ -49,8 +49,8 @@ export const reportsData = [
         "/Mss.jpeg"
       ],
       "docUrl": umoorPdf,
-      "heading": "Major Issues",
-      "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+      "heading": "قضااي رئيسية",
+      "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
     },
     "cities": [
       {
@@ -60,19 +60,19 @@ export const reportsData = [
             "tags": [
               "عشرة مباركة اهبة- دكان بند عزائم"
             ],
-            "text": "Dummy achievement text for بھوپال (عشرة مباركة اهبة- دكان بند عزائم)"
+            "text": "العشرة المباركة عزائم - 500 "
           },
           {
             "tags": [
               "general"
             ],
-            "text": "Dummy achievement text for بھوپال (general)"
+            "text": "مجموعي مجالس (جمعة نا دن انسس جمعة ني راتسس)."
           },
           {
             "tags": [
               "general"
             ],
-            "text": "Dummy achievement text for بھوپال (general)"
+            "text": "ككهرو ما اهبة مجالس - 400"
           }
         ],
         "improvements": [
@@ -80,7 +80,7 @@ export const reportsData = [
             "tags": [
               "محرمات بابت"
             ],
-            "text": "Dummy improvement text for بھوپال (محرمات بابت)"
+            "text": "محرمات ما ملوثين مؤمنين سي عشرة مباركة ثثظظلسس ثثاك تهاوا واسطسس عزائم كيدا"
           }
         ],
         "images": [
@@ -91,8 +91,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "بھوپال"
       },
@@ -103,13 +103,13 @@ export const reportsData = [
             "tags": [
               "عشرة مباركة اهبة- دكان بند عزائم"
             ],
-            "text": "Dummy achievement text for اْشتا (عشرة مباركة اهبة- دكان بند عزائم)"
+            "text": "دكان بند عزم : 90 فيصد"
           },
           {
             "tags": [
               "general"
             ],
-            "text": "Dummy achievement text for اْشتا (general)"
+            "text": "ككوتهن ثثر بيتهي نسس ماتم ني عادة ، كهرا رهي نسس 5 منضض ماتم"
           }
         ],
         "improvements": [
@@ -117,7 +117,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy improvement text for اْشتا ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "images": [
@@ -128,8 +128,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "اْشتا"
       },
@@ -140,19 +140,19 @@ export const reportsData = [
             "tags": [
               "عشرة مباركة اهبة- دكان بند عزائم"
             ],
-            "text": "Dummy achievement text for بهوثثال - برهاني (عشرة مباركة اهبة- دكان بند عزائم)"
+            "text": "دكان ححاوي عرض : 80 فيصد"
           },
           {
             "tags": [
               "بهوثثال - برهاني"
             ],
-            "text": "Dummy achievement text for بهوثثال - برهاني (بهوثثال - برهاني)"
+            "text": "مؤمنين لباس الانور ما} حاضر تهائي ــ تھ واسطسس تفهيم تهئي ؛"
           },
           {
             "tags": [
               "general"
             ],
-            "text": "Dummy achievement text for بهوثثال - برهاني (general)"
+            "text": "75 فيصد سروس كرنار leave لئي ححكا"
           }
         ],
         "improvements": [
@@ -160,7 +160,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy improvement text for بهوثثال - برهاني ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "images": [
@@ -171,8 +171,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "بهوثثال - برهاني"
       },
@@ -183,19 +183,19 @@ export const reportsData = [
             "tags": [
               "عشرة مباركة اهبة- دكان بند عزائم"
             ],
-            "text": "Dummy achievement text for بهوثثال - حكيمي (عشرة مباركة اهبة- دكان بند عزائم)"
+            "text": "العشرة المباركة عزائم : قبل الوقت حاضر تهاوو"
           },
           {
             "tags": [
               "بهوثثال - حكيمي"
             ],
-            "text": "Dummy achievement text for بهوثثال - حكيمي (بهوثثال - حكيمي)"
+            "text": "مجالس ما حاضري : 95 فيصد لباس الانور "
           },
           {
             "tags": [
               "general"
             ],
-            "text": "Dummy achievement text for بهوثثال - حكيمي (general)"
+            "text": "ذاكرين ثثارتي قائم تهئي ؛."
           }
         ],
         "improvements": [
@@ -203,7 +203,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy improvement text for بهوثثال - حكيمي ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "images": [
@@ -214,8 +214,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "بهوثثال - حكيمي"
       },
@@ -226,7 +226,7 @@ export const reportsData = [
             "tags": [
               "عشرة مباركة اهبة- دكان بند عزائم"
             ],
-            "text": "Dummy achievement text for جبلثثور (عشرة مباركة اهبة- دكان بند عزائم)"
+            "text": "دكان بند عزائم - 100 فيصد"
           }
         ],
         "improvements": [
@@ -234,7 +234,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy improvement text for جبلثثور ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "images": [
@@ -245,8 +245,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "جبلثثور"
       },
@@ -257,7 +257,7 @@ export const reportsData = [
             "tags": [
               "عشرة مباركة اهبة- دكان بند عزائم"
             ],
-            "text": "Dummy achievement text for ساككر (عشرة مباركة اهبة- دكان بند عزائم)"
+            "text": "ححاوي عرض - 95 فيصد"
           }
         ],
         "improvements": [
@@ -265,7 +265,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy improvement text for ساككر ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "images": [
@@ -276,8 +276,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "ساككر"
       },
@@ -288,13 +288,13 @@ export const reportsData = [
             "tags": [
               "عشرة مباركة اهبة- دكان بند عزائم"
             ],
-            "text": "Dummy achievement text for سيهور (عشرة مباركة اهبة- دكان بند عزائم)"
+            "text": "دكان بند عزم : ٩٥ فيصد"
           },
           {
             "tags": [
               "general"
             ],
-            "text": "Dummy achievement text for سيهور (general)"
+            "text": "ككهرو ما أهبة مجالس : ٧٠ فيصد"
           }
         ],
         "improvements": [
@@ -302,7 +302,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy improvement text for سيهور ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "images": [
@@ -313,8 +313,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "سيهور"
       },
@@ -325,13 +325,13 @@ export const reportsData = [
             "tags": [
               "عشرة مباركة اهبة- دكان بند عزائم"
             ],
-            "text": "Dummy achievement text for هوشنككاباد (عشرة مباركة اهبة- دكان بند عزائم)"
+            "text": "دكان بند عزائم: 100 فيصد"
           },
           {
             "tags": [
               "general"
             ],
-            "text": "Dummy achievement text for هوشنككاباد (general)"
+            "text": "ككهرو ما أهبة مجلس تهئي"
           }
         ],
         "improvements": [
@@ -339,7 +339,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy improvement text for هوشنككاباد ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "images": [
@@ -350,8 +350,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "هوشنككاباد"
       },
@@ -362,13 +362,13 @@ export const reportsData = [
             "tags": [
               "لباس الانور"
             ],
-            "text": "Dummy achievement text for سيرونج (لباس الانور)"
+            "text": "العشرة المباركة عزائم - لباس الانور ، قبل الوقت حاضر ، سفيد توثثي "
           },
           {
             "tags": [
               "general"
             ],
-            "text": "Dummy achievement text for سيرونج (general)"
+            "text": "3 مساجد ما امامة سي نماز شروع تهئي ؛."
           }
         ],
         "improvements": [
@@ -376,7 +376,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy improvement text for سيرونج ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "images": [
@@ -387,8 +387,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "سيرونج"
       },
@@ -399,13 +399,13 @@ export const reportsData = [
             "tags": [
               "تجهيز تكفين"
             ],
-            "text": "Dummy achievement text for دموه (تجهيز تكفين)"
+            "text": "تجهيز تكفين course"
           },
           {
             "tags": [
               "general"
             ],
-            "text": "Dummy achievement text for دموه (general)"
+            "text": "ككهرو ما أهبة مجلس تهئي"
           }
         ],
         "improvements": [
@@ -413,7 +413,7 @@ export const reportsData = [
             "tags": [
               "general"
             ],
-            "text": "Dummy improvement text for دموه (general)"
+            "text": "نماز حاضري ما فرق ؛"
           }
         ],
         "images": [
@@ -424,8 +424,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "دموه"
       },
@@ -436,19 +436,19 @@ export const reportsData = [
             "tags": [
               "تجهيز تكفين"
             ],
-            "text": "Dummy achievement text for نرسنككرٌهـ (تجهيز تكفين)"
+            "text": "تجهيز تكفين : كميتي مستحكم"
           },
           {
             "tags": [
               "general"
             ],
-            "text": "Dummy achievement text for نرسنككرٌهـ (general)"
+            "text": "اهبة مجلس - ليلة الخميس انسس يوم الجمعة"
           },
           {
             "tags": [
               "general"
             ],
-            "text": "Dummy achievement text for نرسنككرٌهـ (general)"
+            "text": "مجلس حاضري - 90 فيصد"
           }
         ],
         "improvements": [
@@ -456,25 +456,25 @@ export const reportsData = [
             "tags": [
               "محرمات بابت"
             ],
-            "text": "Dummy improvement text for نرسنككرٌهـ (محرمات بابت)"
+            "text": "محرمات : 4 مؤمن"
           },
           {
             "tags": [
               "عشرة مباركة اهبة- دكان بند عزائم"
             ],
-            "text": "Dummy improvement text for نرسنككرٌهـ (عشرة مباركة اهبة- دكان بند عزائم)"
+            "text": "دكان بند عزم - 50 فيصد"
           },
           {
             "tags": [
               "شادي لائـق فرزندو"
             ],
-            "text": "Dummy improvement text for نرسنككرٌهـ (شادي لائـق فرزندو)"
+            "text": "شادي نتهي تهئي - 14 (45-25 عمر)"
           },
           {
             "tags": [
               "general"
             ],
-            "text": "Dummy improvement text for نرسنككرٌهـ (general)"
+            "text": "نماز حاضري - ضعف"
           }
         ],
         "images": [
@@ -485,8 +485,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "نرسنككرٌهـ"
       },
@@ -497,7 +497,7 @@ export const reportsData = [
             "tags": [
               "general"
             ],
-            "text": "Dummy achievement text for بهوثثال - حيدري (general)"
+            "text": "اهبة مجالس جاري ؛"
           }
         ],
         "improvements": [
@@ -505,13 +505,13 @@ export const reportsData = [
             "tags": [
               "شادي لائـق فرزندو"
             ],
-            "text": "Dummy improvement text for بهوثثال - حيدري (شادي لائـق فرزندو)"
+            "text": "شادي لائق فرزندو ككهنا ؛ ، شادي نتهي تهئي."
           },
           {
             "tags": [
               "شادي لائـق فرزندو"
             ],
-            "text": "Dummy improvement text for بهوثثال - حيدري (شادي لائـق فرزندو)"
+            "text": "فرزندو نو غير ساتهسس شادي نو ratio ككهنو ؛."
           }
         ],
         "images": [
@@ -522,8 +522,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "بهوثثال - حيدري"
       },
@@ -534,7 +534,7 @@ export const reportsData = [
             "tags": [
               "general"
             ],
-            "text": "Dummy achievement text for ككونا  (general)"
+            "text": "ككهرو ما أهبة مجالس : ٥٠ فيصد"
           }
         ],
         "improvements": [
@@ -542,13 +542,13 @@ export const reportsData = [
             "tags": [
               "محرمات بابت"
             ],
-            "text": "Dummy improvement text for ككونا  (محرمات بابت)"
+            "text": "محرمات : ٢ مؤمن"
           },
           {
             "tags": [
               "عشرة مباركة اهبة- دكان بند عزائم"
             ],
-            "text": "Dummy improvement text for ككونا  (عشرة مباركة اهبة- دكان بند عزائم)"
+            "text": "دكان بند عزم : ٥٠ فيصد"
           }
         ],
         "images": [
@@ -559,8 +559,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "ككونا "
       },
@@ -571,7 +571,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy achievement text for ويديشا ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "improvements": [
@@ -579,25 +579,25 @@ export const reportsData = [
             "tags": [
               "محرمات بابت"
             ],
-            "text": "Dummy improvement text for ويديشا (محرمات بابت)"
+            "text": "محرمات ما مبتلى - 14 مؤمن"
           },
           {
             "tags": [
               "مخصوصين مؤمنين متعلق"
             ],
-            "text": "Dummy improvement text for ويديشا (مخصوصين مؤمنين متعلق)"
+            "text": "4 مخصوصين فقظ عاشورة نا دن حاضر تهائي ؛ ، تفهيم جاري ؛. "
           },
           {
             "tags": [
               "general"
             ],
-            "text": "Dummy improvement text for ويديشا (general)"
+            "text": "مجلس ما حاضري كم ؛."
           },
           {
             "tags": [
               "general"
             ],
-            "text": "Dummy improvement text for ويديشا (general)"
+            "text": "بعض مؤمنين دارٌهي نهيطط راكهتا. "
           }
         ],
         "images": [
@@ -608,8 +608,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "ويديشا"
       },
@@ -620,7 +620,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy achievement text for بـياؤره ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "improvements": [
@@ -628,7 +628,7 @@ export const reportsData = [
             "tags": [
               "محرمات بابت"
             ],
-            "text": "Dummy improvement text for بـياؤره (محرمات بابت)"
+            "text": "محرمات ما مبتلى - 14 مؤمن"
           }
         ],
         "images": [
@@ -639,8 +639,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "بـياؤره"
       }
@@ -654,8 +654,8 @@ export const reportsData = [
         "/Mss.jpeg"
       ],
       "docUrl": umoorPdf,
-      "heading": "Major Issues",
-      "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+      "heading": "قضااي رئيسية",
+      "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
     },
     "cities": [
       {
@@ -665,7 +665,7 @@ export const reportsData = [
             "tags": [
               "اسباق متعلق"
             ],
-            "text": "Dummy achievement text for اْشتا (اسباق متعلق)"
+            "text": "نصاب 1،2،3 نا حلقةؤ تمام كيدا "
           }
         ],
         "improvements": [
@@ -673,7 +673,7 @@ export const reportsData = [
             "tags": [
               "محرومين فرزندو "
             ],
-            "text": "Dummy improvement text for اْشتا (محرومين فرزندو )"
+            "text": "ديني تعليم محروم - 1"
           }
         ],
         "images": [
@@ -684,8 +684,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "اْشتا"
       },
@@ -696,49 +696,49 @@ export const reportsData = [
             "tags": [
               "اسباق متعلق"
             ],
-            "text": "Dummy achievement text for بهوثثال (اسباق متعلق)"
+            "text": "ظاهر اسباق - 343 ، تأويل اسباق - 256"
           },
           {
             "tags": [
               "اسباق متعلق"
             ],
-            "text": "Dummy achievement text for بهوثثال (اسباق متعلق)"
+            "text": "ححلو اْوي نسس حل كري لو سؤالو - focused sessions"
           },
           {
             "tags": [
               "اسباق متعلق"
             ],
-            "text": "Dummy achievement text for بهوثثال (اسباق متعلق)"
+            "text": "نوجوانو حوار sessions"
           },
           {
             "tags": [
               "اسباق متعلق"
             ],
-            "text": "Dummy achievement text for بهوثثال (اسباق متعلق)"
+            "text": "يوم الجمعة - تفسير القران الكريم "
           },
           {
             "tags": [
               "اسباق متعلق"
             ],
-            "text": "Dummy achievement text for بهوثثال (اسباق متعلق)"
+            "text": "مخصوص اسباق - منتزع الاخبار"
           },
           {
             "tags": [
               "اسباق متعلق"
             ],
-            "text": "Dummy achievement text for بهوثثال (اسباق متعلق)"
+            "text": "شهر الله المعظم - مسائل الامتحان ثثر بيانات"
           },
           {
             "tags": [
               "تحفيظ القراْن الكريـم "
             ],
-            "text": "Dummy achievement text for بهوثثال (تحفيظ القراْن الكريـم )"
+            "text": "قسم التحفيظ قائم تهائي ــ تھ واسطسس عرض ؛"
           },
           {
             "tags": [
               "تحفيظ القراْن الكريـم "
             ],
-            "text": "Dummy achievement text for بهوثثال (تحفيظ القراْن الكريـم )"
+            "text": "تحفيظ واسطسس 2 dedicated  خدمة ككـزار ني تعيـين تهائي "
           }
         ],
         "improvements": [
@@ -746,7 +746,7 @@ export const reportsData = [
             "tags": [
               "الجامعة السيفية داخلة عرض"
             ],
-            "text": "Dummy improvement text for بهوثثال (الجامعة السيفية داخلة عرض)"
+            "text": "داخلة فضل تهائي ــ ايم عرض ؛"
           }
         ],
         "images": [
@@ -757,8 +757,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "بهوثثال"
       },
@@ -769,7 +769,7 @@ export const reportsData = [
             "tags": [
               "اسباق متعلق"
             ],
-            "text": "Dummy achievement text for بهوثثال - حيدري (اسباق متعلق)"
+            "text": "مخصوص اسباق ني رزا نا سبب اسباق ما حاضر تهاناراؤ ني ككنتي 300 نا فوق ثثظظنححي ؛"
           }
         ],
         "improvements": [
@@ -777,7 +777,7 @@ export const reportsData = [
             "tags": [
               "محرومين فرزندو "
             ],
-            "text": "Dummy improvement text for بهوثثال - حيدري (محرومين فرزندو )"
+            "text": "مدارس ايمانية ما جانار فرزندو نو ratio كم ؛."
           }
         ],
         "images": [
@@ -788,8 +788,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "بهوثثال - حيدري"
       },
@@ -800,13 +800,13 @@ export const reportsData = [
             "tags": [
               "فرزندو بابت"
             ],
-            "text": "Dummy achievement text for بهوثثال - برهاني (فرزندو بابت)"
+            "text": "ديني تعليم محروم - 0"
           },
           {
             "tags": [
               "فرزندو بابت"
             ],
-            "text": "Dummy achievement text for بهوثثال - برهاني (فرزندو بابت)"
+            "text": "ديني مدارس - MSB جديد داخلة- 15 فرزندو"
           }
         ],
         "improvements": [
@@ -814,7 +814,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy improvement text for بهوثثال - برهاني ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "images": [
@@ -825,8 +825,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "بهوثثال - برهاني"
       },
@@ -837,13 +837,13 @@ export const reportsData = [
             "tags": [
               "فرزندو بابت"
             ],
-            "text": "Dummy achievement text for ثثيثثريا (فرزندو بابت)"
+            "text": "ديني تعليم محروم - 0"
           },
           {
             "tags": [
               "فرزندو بابت"
             ],
-            "text": "Dummy achievement text for ثثيثثريا (فرزندو بابت)"
+            "text": "ديني مدارس - MSB جديد داخلة- 15 فرزندو"
           }
         ],
         "improvements": [
@@ -851,7 +851,7 @@ export const reportsData = [
             "tags": [
               "اسباق متعلق"
             ],
-            "text": "Dummy improvement text for ثثيثثريا (اسباق متعلق)"
+            "text": "اسباق استمرار ساتهسس نتهي تهاتا"
           }
         ],
         "images": [
@@ -862,8 +862,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "ثثيثثريا"
       },
@@ -874,19 +874,19 @@ export const reportsData = [
             "tags": [
               "فرزندو بابت"
             ],
-            "text": "Dummy achievement text for جبلثثور (فرزندو بابت)"
+            "text": "ديني تعليم محروم - 0"
           },
           {
             "tags": [
               "تحفيظ القراْن الكريـم "
             ],
-            "text": "Dummy achievement text for جبلثثور (تحفيظ القراْن الكريـم )"
+            "text": "تحفيظ القران : جزء عم 101 ، سورة البلد 183 ، سورة الانشقاق 48"
           },
           {
             "tags": [
               "general"
             ],
-            "text": "Dummy achievement text for جبلثثور (general)"
+            "text": "12 امور امتحان : 80 ، مستفيدين امتحان : 22 "
           }
         ],
         "improvements": [
@@ -894,7 +894,7 @@ export const reportsData = [
             "tags": [
               "مدرسة بابت "
             ],
-            "text": "Dummy improvement text for جبلثثور (مدرسة بابت )"
+            "text": "مدرسة نسس renovate كرواني اشد ضرورة ؛"
           }
         ],
         "images": [
@@ -905,8 +905,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "جبلثثور"
       },
@@ -917,7 +917,7 @@ export const reportsData = [
             "tags": [
               "فرزندو بابت"
             ],
-            "text": "Dummy achievement text for دموه (فرزندو بابت)"
+            "text": "ديني تعليم محروم - 0"
           }
         ],
         "improvements": [
@@ -925,7 +925,7 @@ export const reportsData = [
             "tags": [
               "اسباق متعلق"
             ],
-            "text": "Dummy improvement text for دموه (اسباق متعلق)"
+            "text": "سبق ما حاضري كم ؛."
           }
         ],
         "images": [
@@ -936,8 +936,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "دموه"
       },
@@ -948,7 +948,7 @@ export const reportsData = [
             "tags": [
               "فرزندو بابت"
             ],
-            "text": "Dummy achievement text for ساككر (فرزندو بابت)"
+            "text": "ديني تعليم محروم - 0"
           }
         ],
         "improvements": [
@@ -956,7 +956,7 @@ export const reportsData = [
             "tags": [
               "الجامعة السيفية داخلة عرض"
             ],
-            "text": "Dummy improvement text for ساككر (الجامعة السيفية داخلة عرض)"
+            "text": "داخلة فضل تهائي ــ ايم عرض ؛"
           }
         ],
         "images": [
@@ -967,8 +967,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "ساككر"
       },
@@ -979,13 +979,13 @@ export const reportsData = [
             "tags": [
               "فرزندو بابت"
             ],
-            "text": "Dummy achievement text for نرسنككرٌهـ (فرزندو بابت)"
+            "text": "ديني تعليم محروم - 0"
           },
           {
             "tags": [
               "عشرة مباركة اهبة "
             ],
-            "text": "Dummy achievement text for نرسنككرٌهـ (عشرة مباركة اهبة )"
+            "text": "اسكول  كالج رزا - 100 فيصد"
           }
         ],
         "improvements": [
@@ -993,13 +993,13 @@ export const reportsData = [
             "tags": [
               "مدرسة بابت "
             ],
-            "text": "Dummy improvement text for نرسنككرٌهـ (مدرسة بابت )"
+            "text": "مدرسة ني بناء خسته ؛"
           },
           {
             "tags": [
               "اسباق متعلق"
             ],
-            "text": "Dummy improvement text for نرسنككرٌهـ (اسباق متعلق)"
+            "text": "اسباق حاضري - 40 فيصد"
           }
         ],
         "images": [
@@ -1010,8 +1010,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "نرسنككرٌهـ"
       },
@@ -1022,7 +1022,7 @@ export const reportsData = [
             "tags": [
               "فرزندو بابت"
             ],
-            "text": "Dummy achievement text for ويديشا (فرزندو بابت)"
+            "text": "ديني تعليم محروم - 0"
           }
         ],
         "improvements": [
@@ -1030,7 +1030,7 @@ export const reportsData = [
             "tags": [
               "اسباق متعلق"
             ],
-            "text": "Dummy improvement text for ويديشا (اسباق متعلق)"
+            "text": "سبق ما حاضري كم ؛."
           }
         ],
         "images": [
@@ -1041,8 +1041,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "ويديشا"
       },
@@ -1053,7 +1053,7 @@ export const reportsData = [
             "tags": [
               "تحفيظ القراْن الكريـم "
             ],
-            "text": "Dummy achievement text for بـياؤره (تحفيظ القراْن الكريـم )"
+            "text": "تحفيظ القران واسطسس معلم يھ سعي كيدي ؛"
           }
         ],
         "improvements": [
@@ -1061,19 +1061,19 @@ export const reportsData = [
             "tags": [
               "محرومين فرزندو "
             ],
-            "text": "Dummy improvement text for بـياؤره (محرومين فرزندو )"
+            "text": "ديني تعليم محروم - 1"
           },
           {
             "tags": [
               "اسباق متعلق"
             ],
-            "text": "Dummy improvement text for بـياؤره (اسباق متعلق)"
+            "text": "اسباق استمرار ساتهسس نتهي تهاتا"
           },
           {
             "tags": [
               "الجامعة السيفية داخلة عرض"
             ],
-            "text": "Dummy improvement text for بـياؤره (الجامعة السيفية داخلة عرض)"
+            "text": "داخلة فضل تهائي ــ ايم عرض ؛"
           }
         ],
         "images": [
@@ -1084,8 +1084,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "بـياؤره"
       },
@@ -1096,7 +1096,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy achievement text for سيهور ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "improvements": [
@@ -1104,7 +1104,7 @@ export const reportsData = [
             "tags": [
               "محرومين فرزندو "
             ],
-            "text": "Dummy improvement text for سيهور (محرومين فرزندو )"
+            "text": "ديني تعليم محروم - ٥"
           }
         ],
         "images": [
@@ -1115,8 +1115,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "سيهور"
       },
@@ -1127,7 +1127,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy achievement text for ككونا ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "improvements": [
@@ -1135,7 +1135,7 @@ export const reportsData = [
             "tags": [
               "محرومين فرزندو "
             ],
-            "text": "Dummy improvement text for ككونا (محرومين فرزندو )"
+            "text": "ديني تعليم محروم - ١٠"
           }
         ],
         "images": [
@@ -1146,8 +1146,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "ككونا"
       },
@@ -1158,7 +1158,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy achievement text for بهوثثال - حكيمي ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "improvements": [
@@ -1166,7 +1166,7 @@ export const reportsData = [
             "tags": [
               "اسباق متعلق"
             ],
-            "text": "Dummy improvement text for بهوثثال - حكيمي (اسباق متعلق)"
+            "text": "اسباق استمرار ساتهسس نتهي تهاتا"
           }
         ],
         "images": [
@@ -1177,8 +1177,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "بهوثثال - حكيمي"
       },
@@ -1189,7 +1189,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy achievement text for هوشنككاباد ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "improvements": [
@@ -1197,7 +1197,7 @@ export const reportsData = [
             "tags": [
               "الجامعة السيفية داخلة عرض"
             ],
-            "text": "Dummy improvement text for هوشنككاباد (الجامعة السيفية داخلة عرض)"
+            "text": "داخلة فضل تهائي ــ ايم عرض ؛"
           }
         ],
         "images": [
@@ -1208,8 +1208,8 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "هوشنككاباد"
       },
@@ -1220,7 +1220,7 @@ export const reportsData = [
             "tags": [
               ""
             ],
-            "text": "Dummy achievement text for اْشتھ ()"
+            "text": "مزید تفصیلات دستیاب نہیں ہیں۔"
           }
         ],
         "improvements": [
@@ -1228,7 +1228,7 @@ export const reportsData = [
             "tags": [
               "الجامعة السيفية داخلة عرض"
             ],
-            "text": "Dummy improvement text for اْشتھ (الجامعة السيفية داخلة عرض)"
+            "text": "داخلة فضل تهائي ــ ايم عرض ؛"
           }
         ],
         "images": [
@@ -1239,13 +1239,13 @@ export const reportsData = [
             "/Mss.jpeg"
           ],
           "docUrl": umoorPdf,
-          "heading": "Major Issues",
-          "content": "Detailed content missing. Please refer to the downloaded report for complete insights into this matter."
+          "heading": "قضااي رئيسية",
+          "content": "مزید تفصیلات کے لیے برائے مہربانی رپورٹ ڈاؤن لوڈ کریں۔"
         },
         "name": "اْشتھ"
       }
     ],
-    "name": "ا مور تعليمية"
+    "name": "ا مور تعليمية "
   }
 ];
 
