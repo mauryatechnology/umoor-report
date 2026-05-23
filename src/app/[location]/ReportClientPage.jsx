@@ -1,8 +1,8 @@
 'use client';
 
-import { LanguageProvider } from '../../../context/LanguageContext';
-import ReportPageView from '../../../components/Report/ReportPage';
-import Header from '../../../components/common/Header';
+import { LanguageProvider } from '../../context/LanguageContext';
+import ReportPageView from '../../components/Report/ReportPage';
+import Header from '../../components/common/Header';
 
 export default function ReportClientPage({ initialReport }) {
   return (

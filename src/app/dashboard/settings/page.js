@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import { User, Lock, Loader2, Upload, Trash2 } from 'lucide-react';
-import FadeIn from '../../../../components/animations/FadeIn';
+import FadeIn from '../../../components/animations/FadeIn';
+import { useDashboard } from '../DashboardClientLayout';
 
 export default function SettingsPage() {
-  const [user, setUser] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const { user } = useDashboard();
   
   // Profile Form
   const [profileData, setProfileData] = useState({ name: '', contact: '', profileImage: '' });
@@ -20,26 +20,14 @@ export default function SettingsPage() {
   const [pwdMsg, setPwdMsg] = useState({ type: '', text: '' });
 
   useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const res = await fetch('/api/auth/me');
-        if (res.ok) {
-          const data = await res.json();
-          setUser(data.user);
-          setProfileData({
-            name: data.user.name || '',
-            contact: data.user.contact || '',
-            profileImage: data.user.profileImage || ''
-          });
-        }
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchUser();
-  }, []);
+    if (user) {
+      setProfileData({
+        name: user.name || '',
+        contact: user.contact || '',
+        profileImage: user.profileImage || ''
+      });
+    }
+  }, [user]);
 
   const handleProfileUpdate = async (e) => {
     e.preventDefault();
@@ -121,7 +109,7 @@ export default function SettingsPage() {
     }
   };
 
-  if (isLoading) return <div className="p-8 text-center"><Loader2 className="animate-spin mx-auto text-emerald-dark" /></div>;
+  if (!user) return <div className="p-8 text-center"><Loader2 className="animate-spin mx-auto text-emerald-dark" /></div>;
 
   return (
     <div className="space-y-6 max-w-4xl">

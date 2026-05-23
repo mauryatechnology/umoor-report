@@ -8,15 +8,6 @@ const nextConfig = {
       { protocol: 'https', hostname: '**.public.blob.vercel-storage.com' },
     ],
   },
-  async rewrites() {
-    return [
-      // Path-based fallbacks for local development & free-tier Vercel
-      { source: '/r/:location', destination: '/report/:location' },
-      { source: '/r/:location/:path*', destination: '/report/:location/:path*' },
-      { source: '/d/:location', destination: '/dashboard/:location' },
-      { source: '/d/:location/:path*', destination: '/dashboard/:location/:path*' },
-    ];
-  },
 };
 
 export default nextConfig;

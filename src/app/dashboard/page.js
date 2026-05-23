@@ -1,17 +1,20 @@
 'use client';
 
-import { useState, useEffect, use } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { BarChart3, Image as ImageIcon, MapPin, CheckCircle, AlertTriangle, ArrowRight, Loader2 } from 'lucide-react';
-import FadeIn from '../../../components/animations/FadeIn';
+import FadeIn from '../../components/animations/FadeIn';
+import { useDashboard } from './DashboardClientLayout';
 
-export default function DashboardOverview({ params }) {
-  const { location } = use(params);
+export default function DashboardOverview() {
+  const { location } = useDashboard();
   const [report, setReport] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchReport = async () => {
+      if (!location) return;
+      
       try {
         const res = await fetch(`/api/reports/${location}`);
         if (res.ok) {
@@ -27,7 +30,7 @@ export default function DashboardOverview({ params }) {
     fetchReport();
   }, [location]);
 
-  if (isLoading) {
+  if (isLoading || !location) {
     return (
       <div className="h-64 flex items-center justify-center">
         <Loader2 className="w-8 h-8 animate-spin text-emerald-dark" />
@@ -102,7 +105,7 @@ export default function DashboardOverview({ params }) {
               <p className="text-charcoal/70 mb-6 text-sm">
                 Update the English version of achievements, improvements, labels, and accordion sections. This data powers the English view of your portal.
               </p>
-              <Link href={`/dashboard/${location}/english`} className="inline-flex items-center justify-between w-full bg-charcoal/5 hover:bg-charcoal/10 text-charcoal font-medium px-4 py-3 rounded-xl transition-colors">
+              <Link href={`/dashboard/english`} className="inline-flex items-center justify-between w-full bg-charcoal/5 hover:bg-charcoal/10 text-charcoal font-medium px-4 py-3 rounded-xl transition-colors">
                 <span>Go to English Editor</span>
                 <ArrowRight size={16} />
               </Link>
@@ -123,7 +126,7 @@ export default function DashboardOverview({ params }) {
               <p className="text-charcoal/70 mb-6 text-sm">
                 Update the Urdu version of achievements, improvements, labels, and accordion sections. This data powers the Urdu view of your portal.
               </p>
-              <Link href={`/dashboard/${location}/urdu`} className="inline-flex items-center justify-between w-full bg-charcoal/5 hover:bg-charcoal/10 text-charcoal font-medium px-4 py-3 rounded-xl transition-colors">
+              <Link href={`/dashboard/urdu`} className="inline-flex items-center justify-between w-full bg-charcoal/5 hover:bg-charcoal/10 text-charcoal font-medium px-4 py-3 rounded-xl transition-colors">
                 <span>Go to Urdu Editor</span>
                 <ArrowRight size={16} />
               </Link>

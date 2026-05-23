@@ -31,15 +31,8 @@ export default function LoginPage() {
         throw new Error(data.error || 'Login failed');
       }
 
-      // Redirect to dashboard (with path fallback support for local and vercel preview domains)
-      const isLocalhostOrVercel = window.location.hostname.includes('localhost') || window.location.hostname.endsWith('.vercel.app');
-      if (isLocalhostOrVercel) {
-        router.push(`/d/${data.user.location}`);
-      } else {
-        // In production custom domain, we redirect to the subdomain dashboard
-        const rootDomain = (process.env.NEXT_PUBLIC_ROOT_DOMAIN || window.location.hostname).replace(/^https?:\/\//, '').replace(/\/+$/, '');
-        window.location.href = `https://${data.user.location}.${rootDomain}/dashboard`;
-      }
+      // Redirect to unified dashboard route
+      window.location.href = '/dashboard';
     } catch (err) {
       setError(err.message);
     } finally {

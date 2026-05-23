@@ -68,15 +68,8 @@ export default function RegisterPage() {
         throw new Error(data.error || 'Registration failed');
       }
 
-      // Redirect to dashboard (with path fallback support for local and vercel preview domains)
-      const isLocalhostOrVercel = window.location.hostname.includes('localhost') || window.location.hostname.endsWith('.vercel.app');
-      if (isLocalhostOrVercel) {
-        router.push(`/d/${data.user.location}`);
-      } else {
-        // In production custom domain, redirect to the subdomain dashboard
-        const rootDomain = (process.env.NEXT_PUBLIC_ROOT_DOMAIN || window.location.hostname).replace(/^https?:\/\//, '').replace(/\/+$/, '');
-        window.location.href = `https://${data.user.location}.${rootDomain}/dashboard`;
-      }
+      // Redirect to unified dashboard route
+      window.location.href = '/dashboard';
     } catch (err) {
       setError(err.message);
     } finally {
@@ -157,7 +150,7 @@ export default function RegisterPage() {
                 {slugPreview && (
                   <p className="mt-1.5 text-xs text-charcoal/60 flex items-center gap-1">
                     <CheckCircle2 size={12} className="text-emerald-500" />
-                    Your portal URL: <span className="font-mono text-emerald-dark bg-emerald-50 px-1 rounded">{slugPreview}.umoor-report.com</span>
+                    Your portal URL: <span className="font-mono text-emerald-dark bg-emerald-50 px-1 rounded">/{slugPreview}</span>
                   </p>
                 )}
               </div>

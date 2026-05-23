@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import ReportClientPage from './ReportClientPage';
-import dbConnect from '../../../lib/mongodb';
-import Report from '../../../models/Report';
+import dbConnect from '../../lib/mongodb';
+import Report from '../../models/Report';
 
 export const revalidate = 60; // Revalidate every 60 seconds (ISR)
 

@@ -1,11 +1,12 @@
 'use client';
 
-import { useState, useEffect, use } from 'react';
+import { useState, useEffect } from 'react';
 import { Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
-import DataEditor from '../../../../components/dashboard/DataEditor';
+import DataEditor from '../../../components/dashboard/DataEditor';
+import { useDashboard } from '../DashboardClientLayout';
 
-export default function UrduEditor({ params }) {
-  const { location } = use(params);
+export default function UrduEditor() {
+  const { location } = useDashboard();
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
@@ -13,6 +14,8 @@ export default function UrduEditor({ params }) {
 
   useEffect(() => {
     const fetchReport = async () => {
+      if (!location) return;
+
       try {
         const res = await fetch(`/api/reports/${location}`);
         if (res.ok) {
@@ -64,7 +67,7 @@ export default function UrduEditor({ params }) {
     }
   };
 
-  if (isLoading) {
+  if (isLoading || !location) {
     return (
       <div className="h-64 flex items-center justify-center">
         <Loader2 className="w-8 h-8 animate-spin text-emerald-dark" />

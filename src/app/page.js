@@ -72,7 +72,7 @@ export default function LandingPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Globe2, title: "Custom Subdomains", desc: "Get your own dedicated portal URL (e.g., yourcity.umoor-report.com) automatically upon registration." },
+              { icon: Globe2, title: "Dedicated Portals", desc: "Get your own dedicated portal URL (e.g., /yourcity) automatically upon registration." },
               { icon: Languages, title: "Bilingual Support", desc: "Manage and present data in both English and Urdu simultaneously with perfect RTL layout support." },
               { icon: BarChart3, title: "Dynamic Dashboards", desc: "Beautiful, interactive presentation of your achievements, improvements, and image galleries." }
             ].map((feature, i) => (
