@@ -1,12 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { User, Lock, Loader2, Upload, Trash2, Download, Type } from 'lucide-react';
+import { User, Lock, Loader2, Upload, Trash2, Download, Type, Palette, Image as ImageIcon, Save } from 'lucide-react';
 import FadeIn from '../../../components/animations/FadeIn';
 import { useDashboard } from '../DashboardClientLayout';
 
 export default function SettingsPage() {
-  const { user } = useDashboard();
+  const { user, location } = useDashboard();
   
   // Profile Form
   const [profileData, setProfileData] = useState({ name: '', contact: '', profileImage: '' });
@@ -19,6 +19,13 @@ export default function SettingsPage() {
   const [isPwdSaving, setIsPwdSaving] = useState(false);
   const [pwdMsg, setPwdMsg] = useState({ type: '', text: '' });
 
+  // Header Customization Form
+  const [headerData, setHeaderData] = useState({ logoUrl: '', title: '', subtitle: '' });
+  const [isHeaderSaving, setIsHeaderSaving] = useState(false);
+  const [headerMsg, setHeaderMsg] = useState({ type: '', text: '' });
+  const [uploadingLogo, setUploadingLogo] = useState(false);
+  const [headerLoaded, setHeaderLoaded] = useState(false);
+
   useEffect(() => {
     if (user) {
       setProfileData({
@@ -28,6 +35,30 @@ export default function SettingsPage() {
       });
     }
   }, [user]);
+
+  // Fetch existing header settings from the report
+  useEffect(() => {
+    const fetchHeaderSettings = async () => {
+      if (!location) return;
+      try {
+        const res = await fetch(`/api/reports/${location}`);
+        if (res.ok) {
+          const data = await res.json();
+          const hs = data.report?.headerSettings || {};
+          setHeaderData({
+            logoUrl: hs.logoUrl || '',
+            title: hs.title || '',
+            subtitle: hs.subtitle || '',
+          });
+        }
+      } catch (err) {
+        console.error('Failed to fetch header settings:', err);
+      } finally {
+        setHeaderLoaded(true);
+      }
+    };
+    fetchHeaderSettings();
+  }, [location]);
 
   const handleProfileUpdate = async (e) => {
     e.preventDefault();
@@ -45,7 +76,6 @@ export default function SettingsPage() {
       if (!res.ok) throw new Error(data.error || 'Failed to update');
       
       setProfileMsg({ type: 'success', text: 'Profile updated successfully' });
-      // Reload page to update sidebar avatar
       setTimeout(() => window.location.reload(), 1500);
     } catch (err) {
       setProfileMsg({ type: 'error', text: err.message });
@@ -109,11 +139,163 @@ export default function SettingsPage() {
     }
   };
 
+  const handleLogoUpload = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploadingLogo(true);
+    setHeaderMsg({ type: '', text: '' });
+
+    try {
+      const res = await fetch(`/api/upload?filename=${encodeURIComponent(file.name)}`, {
+        method: 'POST',
+        body: file,
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error);
+
+      setHeaderData(prev => ({ ...prev, logoUrl: data.url }));
+    } catch (error) {
+      setHeaderMsg({ type: 'error', text: 'Logo upload failed' });
+    } finally {
+      setUploadingLogo(false);
+    }
+  };
+
+  const handleHeaderSave = async (e) => {
+    e.preventDefault();
+    setIsHeaderSaving(true);
+    setHeaderMsg({ type: '', text: '' });
+
+    try {
+      const res = await fetch(`/api/reports/${location}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ headerSettings: headerData }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to update header');
+      
+      setHeaderMsg({ type: 'success', text: 'Header updated successfully! Changes will appear on your public report page.' });
+    } catch (err) {
+      setHeaderMsg({ type: 'error', text: err.message });
+    } finally {
+      setIsHeaderSaving(false);
+    }
+  };
+
   if (!user) return <div className="p-8 text-center"><Loader2 className="animate-spin mx-auto text-emerald-dark" /></div>;
 
   return (
-    <div className="space-y-6 max-w-4xl">
+    <div className="space-y-6 max-w-4xl pb-8">
       <h1 className="text-2xl font-bold text-emerald-dark font-heading">Settings</h1>
+
+      {/* Header Customization — Full width, at the top for prominence */}
+      <FadeIn delay={0.05}>
+        <div className="bg-white rounded-2xl shadow-sm border border-emerald-dark/5 overflow-hidden">
+          <div className="p-5 border-b border-charcoal/5 bg-gradient-to-r from-blue-50 to-indigo-50 flex items-center gap-3">
+            <Palette size={20} className="text-indigo-600" />
+            <div>
+              <h2 className="font-bold text-charcoal">Public Report Header</h2>
+              <p className="text-xs text-charcoal/50 mt-0.5">Customize the header shown on your public report page at /{location}</p>
+            </div>
+          </div>
+          
+          <form onSubmit={handleHeaderSave} className="p-6 space-y-5">
+            {headerMsg.text && (
+              <div className={`p-3 text-sm rounded-lg ${headerMsg.type === 'success' ? 'bg-emerald-50 text-emerald-700' : 'bg-red-50 text-red-700'}`}>
+                {headerMsg.text}
+              </div>
+            )}
+
+            {/* Live Preview */}
+            <div className="rounded-xl overflow-hidden border border-charcoal/10 shadow-sm">
+              <div className="bg-emerald-dark text-gold flex items-center justify-between px-6 py-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center overflow-hidden shrink-0 border border-white/10">
+                    {headerData.logoUrl ? (
+                      <img src={headerData.logoUrl} alt="Logo preview" className="w-full h-full object-contain" />
+                    ) : (
+                      <img src="/bhplLogo.png" alt="Default logo" className="w-full h-full object-contain opacity-50" />
+                    )}
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-heading font-bold text-white leading-tight">
+                      {headerData.title || 'Dawoodi Bohra'}
+                    </h3>
+                    <p className="text-xs text-gold font-medium">
+                      {headerData.subtitle || 'Jamat Bhopal'}
+                    </p>
+                  </div>
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-white/30 bg-white/5 px-3 py-1 rounded-full border border-white/10">Preview</span>
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-5">
+              {/* Logo Upload */}
+              <div className="sm:col-span-2">
+                <label className="block text-xs font-semibold text-charcoal/60 uppercase tracking-wider mb-2">Header Logo</label>
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-xl bg-cream border border-charcoal/10 flex items-center justify-center overflow-hidden shrink-0">
+                    {headerData.logoUrl ? (
+                      <img src={headerData.logoUrl} alt="Logo" className="w-full h-full object-contain p-1" />
+                    ) : (
+                      <ImageIcon size={24} className="text-charcoal/20" />
+                    )}
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <label className="bg-white border border-charcoal/10 hover:bg-charcoal/5 text-sm font-medium px-4 py-2 rounded-lg cursor-pointer transition-colors flex items-center gap-2">
+                      {uploadingLogo ? <Loader2 size={16} className="animate-spin" /> : <Upload size={16} />}
+                      {headerData.logoUrl ? 'Change Logo' : 'Upload Logo'}
+                      <input type="file" accept="image/*" className="hidden" onChange={handleLogoUpload} disabled={uploadingLogo} />
+                    </label>
+                    {headerData.logoUrl && (
+                      <button type="button" onClick={() => setHeaderData(p => ({ ...p, logoUrl: '' }))} className="text-red-500 hover:bg-red-50 p-2 rounded-lg transition-colors" title="Remove custom logo">
+                        <Trash2 size={18} />
+                      </button>
+                    )}
+                  </div>
+                  <p className="text-xs text-charcoal/40 hidden sm:block">Leave empty to use the default logo.</p>
+                </div>
+              </div>
+
+              {/* Title */}
+              <div>
+                <label className="block text-xs font-semibold text-charcoal/60 uppercase tracking-wider mb-1.5">Header Title</label>
+                <input
+                  type="text"
+                  value={headerData.title}
+                  onChange={e => setHeaderData({ ...headerData, title: e.target.value })}
+                  className="w-full px-4 py-2.5 rounded-xl border border-charcoal/10 bg-white focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500/30 outline-none text-sm transition-all"
+                  placeholder="e.g. Dawoodi Bohra (default)"
+                />
+              </div>
+
+              {/* Subtitle */}
+              <div>
+                <label className="block text-xs font-semibold text-charcoal/60 uppercase tracking-wider mb-1.5">Header Subtitle</label>
+                <input
+                  type="text"
+                  value={headerData.subtitle}
+                  onChange={e => setHeaderData({ ...headerData, subtitle: e.target.value })}
+                  className="w-full px-4 py-2.5 rounded-xl border border-charcoal/10 bg-white focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500/30 outline-none text-sm transition-all"
+                  placeholder="e.g. Jamat Bhopal (default)"
+                />
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between pt-2 border-t border-charcoal/5">
+              <p className="text-xs text-charcoal/40">Empty fields will use default values.</p>
+              <button type="submit" disabled={isHeaderSaving} className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-xl font-medium transition-all shadow-sm active:scale-95 flex items-center gap-2 text-sm">
+                {isHeaderSaving ? <Loader2 size={16} className="animate-spin" /> : <Save size={16} />}
+                Save Header
+              </button>
+            </div>
+          </form>
+        </div>
+      </FadeIn>
 
       <div className="grid md:grid-cols-2 gap-6">
         {/* Profile Settings */}
@@ -157,29 +339,25 @@ export default function SettingsPage() {
                 </div>
               </div>
 
-              {/* Name field */}
               <div>
                 <label className="block text-sm font-medium text-charcoal/80 mb-1.5">Full Name</label>
                 <input type="text" value={profileData.name} onChange={e => setProfileData({...profileData, name: e.target.value})} className="w-full px-4 py-2.5 rounded-xl border border-charcoal/10 bg-white focus:ring-2 focus:ring-emerald-dark/20 outline-none" required />
               </div>
 
-              {/* Email field */}
               <div>
                 <label className="block text-sm font-medium text-charcoal/80 mb-1.5">Email (Read-only)</label>
                 <input type="email" value={user?.email || ''} disabled className="w-full px-4 py-2.5 rounded-xl border border-charcoal/10 bg-charcoal/5 text-charcoal/60 outline-none" />
               </div>
 
-              {/* Contact field */}
               <div>
                 <label className="block text-sm font-medium text-charcoal/80 mb-1.5">Contact Number</label>
                 <input type="tel" value={profileData.contact} onChange={e => setProfileData({...profileData, contact: e.target.value})} className="w-full px-4 py-2.5 rounded-xl border border-charcoal/10 bg-white focus:ring-2 focus:ring-emerald-dark/20 outline-none" required />
               </div>
 
-              {/* Location field */}
               <div>
                 <label className="block text-sm font-medium text-charcoal/80 mb-1.5">Portal Location (Read-only)</label>
                 <input type="text" value={user?.location || ''} disabled className="w-full px-4 py-2.5 rounded-xl border border-charcoal/10 bg-charcoal/5 text-charcoal/60 outline-none" />
-                <p className="text-xs text-charcoal/50 mt-1">Contact support to change your subdomain location.</p>
+                <p className="text-xs text-charcoal/50 mt-1">Contact support to change your portal location.</p>
               </div>
 
               <div className="pt-2">

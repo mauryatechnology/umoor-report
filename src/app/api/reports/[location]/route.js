@@ -51,8 +51,24 @@ export async function PUT(req, { params }) {
     await dbConnect();
     
     const body = await req.json();
-    const { language, data } = body;
-    
+    const { language, data, headerSettings } = body;
+
+    // Mode 1: Header settings update
+    if (headerSettings) {
+      const report = await Report.findOneAndUpdate(
+        { location: location.toLowerCase() },
+        { $set: { headerSettings } },
+        { new: true, runValidators: true }
+      );
+
+      if (!report) {
+        return NextResponse.json({ error: 'Report not found' }, { status: 404 });
+      }
+
+      return NextResponse.json({ message: 'Header settings updated successfully', report });
+    }
+
+    // Mode 2: Language data update (existing behavior)
     if (!language || !['en', 'ur'].includes(language)) {
       return NextResponse.json({ error: 'Valid language (en or ur) is required' }, { status: 400 });
     }

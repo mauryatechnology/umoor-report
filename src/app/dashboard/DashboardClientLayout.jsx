@@ -16,6 +16,7 @@ export default function DashboardClientLayout({ children }) {
   const router = useRouter();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [user, setUser] = useState(null);
+  const [headerSettings, setHeaderSettings] = useState({ logoUrl: '/bhplLogo.png', title: 'Dashboard' });
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -38,6 +39,38 @@ export default function DashboardClientLayout({ children }) {
     };
     fetchUser();
   }, [router]);
+
+  useEffect(() => {
+    const fetchHeaderSettings = async () => {
+      if (!user?.location) return;
+      try {
+        const res = await fetch(`/api/reports/${user.location}`);
+        if (res.ok) {
+          const data = await res.json();
+          const hs = data.report?.headerSettings || {};
+          if (hs.logoUrl || hs.title) {
+            setHeaderSettings({
+              logoUrl: hs.logoUrl || '/bhplLogo.png',
+              title: hs.title || 'Dashboard',
+            });
+            
+            // Dynamically update the favicon
+            const iconUrl = hs.logoUrl || '/favicon.svg';
+            let link = document.querySelector("link[rel~='icon']");
+            if (!link) {
+              link = document.createElement('link');
+              link.rel = 'icon';
+              document.head.appendChild(link);
+            }
+            link.href = iconUrl;
+          }
+        }
+      } catch (err) {
+        console.error('Failed to fetch header settings:', err);
+      }
+    };
+    fetchHeaderSettings();
+  }, [user?.location]);
 
   const handleLogout = async () => {
     try {
@@ -85,11 +118,11 @@ export default function DashboardClientLayout({ children }) {
         )}
 
         {/* Sidebar */}
-        <aside className={`fixed lg:static inset-y-0 left-0 z-50 w-64 bg-emerald-dark text-white transform transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'} flex flex-col shadow-2xl`}>
+        <aside className={`fixed lg:sticky lg:top-0 inset-y-0 left-0 z-50 w-64 h-screen bg-emerald-dark text-white transform transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'} flex flex-col shadow-2xl shrink-0`}>
           <div className="p-6 flex items-center justify-between border-b border-white/10 shrink-0">
             <Link href="/dashboard" className="flex items-center gap-3">
-              <img src="/bhplLogo.png" alt="Logo" className="h-8 w-auto object-contain" />
-              <span className="font-heading font-bold text-lg text-gold">Dashboard</span>
+              <img src={headerSettings.logoUrl} alt="Logo" className="h-8 w-auto object-contain" />
+              <span className="font-heading font-bold text-lg text-gold">{headerSettings.title}</span>
             </Link>
             <button onClick={() => setIsSidebarOpen(false)} className="lg:hidden text-white/70 hover:text-white">
               <X size={24} />
