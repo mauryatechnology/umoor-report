@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { User, Lock, Loader2, Upload, Trash2 } from 'lucide-react';
+import { User, Lock, Loader2, Upload, Trash2, Download, Type } from 'lucide-react';
 import FadeIn from '../../../components/animations/FadeIn';
 import { useDashboard } from '../DashboardClientLayout';
 
@@ -157,21 +157,25 @@ export default function SettingsPage() {
                 </div>
               </div>
 
+              {/* Name field */}
               <div>
                 <label className="block text-sm font-medium text-charcoal/80 mb-1.5">Full Name</label>
                 <input type="text" value={profileData.name} onChange={e => setProfileData({...profileData, name: e.target.value})} className="w-full px-4 py-2.5 rounded-xl border border-charcoal/10 bg-white focus:ring-2 focus:ring-emerald-dark/20 outline-none" required />
               </div>
 
+              {/* Email field */}
               <div>
                 <label className="block text-sm font-medium text-charcoal/80 mb-1.5">Email (Read-only)</label>
                 <input type="email" value={user?.email || ''} disabled className="w-full px-4 py-2.5 rounded-xl border border-charcoal/10 bg-charcoal/5 text-charcoal/60 outline-none" />
               </div>
 
+              {/* Contact field */}
               <div>
                 <label className="block text-sm font-medium text-charcoal/80 mb-1.5">Contact Number</label>
                 <input type="tel" value={profileData.contact} onChange={e => setProfileData({...profileData, contact: e.target.value})} className="w-full px-4 py-2.5 rounded-xl border border-charcoal/10 bg-white focus:ring-2 focus:ring-emerald-dark/20 outline-none" required />
               </div>
 
+              {/* Location field */}
               <div>
                 <label className="block text-sm font-medium text-charcoal/80 mb-1.5">Portal Location (Read-only)</label>
                 <input type="text" value={user?.location || ''} disabled className="w-full px-4 py-2.5 rounded-xl border border-charcoal/10 bg-charcoal/5 text-charcoal/60 outline-none" />
@@ -228,6 +232,32 @@ export default function SettingsPage() {
           </div>
         </FadeIn>
       </div>
+
+      {/* Resources & Typography */}
+      <FadeIn delay={0.3}>
+        <div className="bg-white rounded-2xl shadow-sm border border-emerald-dark/5 overflow-hidden">
+          <div className="p-5 border-b border-charcoal/5 bg-purple-50 flex items-center gap-3">
+            <Type size={20} className="text-purple-600" />
+            <h2 className="font-bold text-charcoal">Resources &amp; Typography</h2>
+          </div>
+          <div className="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="space-y-1">
+              <h3 className="font-bold text-charcoal text-sm">Kanz-ul-Marjaan Font</h3>
+              <p className="text-xs text-charcoal/60 max-w-xl">
+                Download the official Kanz-ul-Marjaan TrueType font to render high-quality Urdu calligraphy and specialized typography correctly on all your devices.
+              </p>
+            </div>
+            <a
+              href="/KANZ-AL-MARJAAN.TTF"
+              download="KANZ-AL-MARJAAN.TTF"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2.5 rounded-xl font-medium transition-all shadow-md active:scale-95 flex items-center justify-center gap-2 self-start sm:self-auto text-sm shrink-0"
+            >
+              <Download size={16} />
+              Download Kanz Font
+            </a>
+          </div>
+        </div>
+      </FadeIn>
     </div>
   );
 }

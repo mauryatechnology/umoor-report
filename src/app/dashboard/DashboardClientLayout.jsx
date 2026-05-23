@@ -75,7 +75,7 @@ export default function DashboardClientLayout({ children }) {
 
   return (
     <DashboardContext.Provider value={{ user, location }}>
-      <div className="min-h-screen bg-cream flex font-body">
+      <div className="h-screen overflow-hidden bg-cream flex font-body">
         {/* Mobile sidebar overlay */}
         {isSidebarOpen && (
           <div 
